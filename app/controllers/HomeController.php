@@ -19,5 +19,13 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
+	
+	public function getDashboard()
+	{
+		echo 'Welcome to dashboard<br/>Here\'s your user:';
+		
+		var_dump( Auth::user() );
+				
+	}
 
 }

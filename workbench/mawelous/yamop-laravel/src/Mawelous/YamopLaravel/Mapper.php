@@ -22,7 +22,7 @@ class Mapper extends \Mawelous\Yamop\Mapper
 	public function getPaginator( $perPage = 10, $page = null )
 	{
 		if( $page == null ){
-			$page = \Finput::get( 'page', 1 );
+			$page = (int)\Input::get( 'page', 1 );
 		}
 	
 		return parent::getPaginator( $page, $perPage );

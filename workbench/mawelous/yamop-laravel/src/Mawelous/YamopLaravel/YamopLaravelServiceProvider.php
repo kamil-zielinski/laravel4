@@ -3,13 +3,20 @@
 use Illuminate\Support\ServiceProvider;
 
 class YamopLaravelServiceProvider extends ServiceProvider {
-
+	
 	/**
-	 * Indicates if loading of the provider is deferred.
+	 * Bootstrap the application events.
+	 * Adds YampoLaravelUserProvider
 	 *
-	 * @var bool
+	 * @return void
 	 */
-	protected $defer = false;
+	public function boot() {
+		
+		$this->app['auth']->extend( 'yamop', function( $app ) {
+			$provider = new YamopLaravelUserProvider( $app[ 'hash' ], $app[ 'config' ]->get( 'auth.model' ) );
+			return new \Illuminate\Auth\Guard( $provider, $app[ 'session' ] );
+		});		
+	}	
 
 	/**
 	 * Register the service provider.
@@ -21,17 +28,6 @@ class YamopLaravelServiceProvider extends ServiceProvider {
 	public function register()
 	{
 	}
-
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array();
-	}
-	
 
 
 }

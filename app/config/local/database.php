@@ -122,11 +122,11 @@ return array(
 	),
 		
 	'mongo' => array(
-		'host'     => 'host',
+		'host'     => 'ds037847.mongolab.com',
 		'port'     => 37847,
-		'database' => 'db',
-		'user'     => 'user',
-		'password' => 'pass'			
+		'database' => '99hacksdev',
+		'user'     => 'coleadium',
+		'password' => 'test11'			
 	),		
 
 );

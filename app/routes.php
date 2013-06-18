@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'AuthController@getLogin' );
 
 Route::controller('develop', 'DevelopController');
+Route::controller('auth', 'AuthController');
+
+Route::get( 'dashboard', 'HomeController@getDashboard' );
