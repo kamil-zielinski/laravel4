@@ -54,7 +54,7 @@ In the `require` key of `composer.json` file add the following
     "mawelous/yamop-laravel": "dev-master"
 ```
 
-Run the Composer update comand
+Run the Composer update command
 
     $ composer update
 
@@ -69,7 +69,7 @@ Now let Yamop know your credentials. Add `mongo` in your database configuration
     ),  
 ```
 
-After it's done inform Laravel about new provider. In `config\app.php` file in `prividers` array add `YampoLaravelServiceProvider`
+After it's done inform Laravel about new provider. In `config\app.php` file in `providers` array add `YampoLaravelServiceProvider`
 ```php
     ...
     'Illuminate\View\ViewServiceProvider',
