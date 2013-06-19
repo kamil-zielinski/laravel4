@@ -4,9 +4,20 @@ namespace Mawelous\YamopLaravel;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
+/**
+ * Implements interfaces need for authentication
+ * and password reminder.
+ * 
+ * @author Kamil Zieliński <kamilz@mawelous.com>
+ *
+ */
 class User extends Model implements UserInterface, RemindableInterface { 
 	
-	
+	/**
+	 * Set hashed password
+	 * 
+	 * @param string $password
+	 */
 	public function setPassword( $password )
 	{
 		$this->password = Hash::make( $password );

@@ -6,6 +6,13 @@ use Illuminate\Hashing\HasherInterface;
 use Illuminate\Auth\UserProviderInterface;
 use Illuminate\Auth\UserInterface;
 
+/**
+ * User provider.
+ * Allow to use YamopLaravel for authentication.
+ * 
+ * @author Kamil Zieliński <kamilz@mawelous.com>
+ *
+ */
 class YamopLaravelUserProvider implements UserProviderInterface {
 
 	/**

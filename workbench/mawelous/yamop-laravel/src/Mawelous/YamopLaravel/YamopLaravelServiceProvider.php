@@ -2,6 +2,13 @@
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Service provider for YamopLaravel.
+ * Register yamop auth driver.
+ * 
+ * @author Kamil Zieliński <kamilz@mawelous.com>
+ *
+ */
 class YamopLaravelServiceProvider extends ServiceProvider {
 	
 	/**
